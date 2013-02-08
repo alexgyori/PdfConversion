@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2b6e653d-1956-4502-a8a6-3b71711c796e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8081/IConversionService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IConversionService.disco" MetadataType="Disco" ID="ac9f9457-bd14-4252-b860-f3389dd5cb0f" SourceId="1" SourceUrl="http://localhost:8081/IConversionService?disco" />
+    <MetadataFile FileName="ConversionService.wsdl" MetadataType="Wsdl" ID="1f57e34c-84c2-4666-bcbd-0a2ea789979d" SourceId="1" SourceUrl="http://localhost:8081/IConversionService?wsdl" />
+    <MetadataFile FileName="IConversionService.xsd" MetadataType="Schema" ID="9c80ad6d-8405-4b13-876c-85bf896da9a2" SourceId="1" SourceUrl="http://localhost:8081/IConversionService?xsd=xsd0" />
+    <MetadataFile FileName="IConversionService1.xsd" MetadataType="Schema" ID="bbbaea5a-d798-44a1-bef5-6e7d0ef8f848" SourceId="1" SourceUrl="http://localhost:8081/IConversionService?xsd=xsd1" />
+    <MetadataFile FileName="IConversionService2.xsd" MetadataType="Schema" ID="9b916903-67ad-44f7-860d-e69634e5cc04" SourceId="1" SourceUrl="http://localhost:8081/IConversionService?xsd=xsd2" />
+    <MetadataFile FileName="IConversionService3.xsd" MetadataType="Schema" ID="cf2d1733-52b3-4532-b7f4-e2ee63db4aa9" SourceId="1" SourceUrl="http://localhost:8081/IConversionService?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

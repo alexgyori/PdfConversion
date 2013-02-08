@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8081/IConversionService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PdfConversionService.API" />
+  <xs:import schemaLocation="http://localhost:8081/IConversionService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PdfConversion.Server.StatusService" />
+  <xs:element name="GetFileState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PdfConversionService.API" minOccurs="0" name="GetFileStateResult" type="q1:FileState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableFiles">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableFilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PdfConversion.Server.StatusService" minOccurs="0" name="GetAvailableFilesResult" nillable="true" type="q2:ArrayOfFileStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServerStatus">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServerStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PdfConversionService.API" minOccurs="0" name="GetServerStatusResult" type="q3:ServerState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

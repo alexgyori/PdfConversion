@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="dec710cb-e551-4d49-8b27-696437cd5686" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <comments>
+    <comment Id="2e62c564-ef69-4b8c-8ad5-400f9a161b55" name="Comment1">
+      <body>Wrapped 3rd party component that converts to PDF format. Uses ThreadPool to do conversions in parallel. Each conversion is queued to the threadpool. The MaxNumberOfThreads in the thread pool is configurable.</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="e21f10e8-ee20-4f18-951e-0c1a7941078c" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+    <comment Id="cf6e3462-d7fc-486c-9915-84114fe009b8" name="Comment2">
+      <body>Shared folder can be configured from app.config in both client and server applications.</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="edcba72c-c2ca-4613-861d-ae4dcd787935" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+    <comment Id="a316c70c-9ef7-45c2-aae3-2ccdbdcd2993" name="Comment3">
+      <body>Data Repository backed by a databse generated with Entity Framework 5 in a Code First manner</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="ab6cfa9b-80f1-4d3a-89cd-71aa0289f912" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+    <comment Id="6e1609cb-2b76-49ae-a37e-4ca2869174cf" name="Comment4">
+      <body>Polling service. It polls the folder at given intervals, populates the database(using DataService) with the inital status of each file, passes the request down to the converter component to perform the long task of converting.</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="5cd52a4a-16fa-4e2d-b16a-adfa4eb954a2" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+    <comment Id="65f0be41-f191-4201-8a94-2b3c54fc0213" name="Comment5">
+      <body>WCF serviceLibrary.
+It defines Service contraacts (operation and data contracts) and the implementation of the service. It uses the database to respond to queries from clients.</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="eeb0ef85-1686-4b88-ba6d-672750058209" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+    <comment Id="cb817b65-e0a7-4635-b039-38498bf3974a" name="Comment6">
+      <body>It starts the poller in its own thread and it hosts the WCF Service(it is a self hosted service).
+Uses App.config to configure lower components.</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="c789f8bc-4960-466f-a263-3fcb4c879356" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+  </comments>
+  <layers>
+    <layer Id="ab6cfa9b-80f1-4d3a-89cd-71aa0289f912" name="PdfConversion.Server.DataService" />
+    <layer Id="edcba72c-c2ca-4613-861d-ae4dcd787935" name="SharedFolder(filesystem)" />
+    <layer Id="5cd52a4a-16fa-4e2d-b16a-adfa4eb954a2" name="PdfConversion.Server.Polling">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="cd219e1f-a425-4d56-ad1e-9b050dd5c316" direction="Forward">
+          <layerMoniker Id="ab6cfa9b-80f1-4d3a-89cd-71aa0289f912" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="4cbfad74-e3af-4ca2-9335-602f6bcbc836" direction="Forward">
+          <layerMoniker Id="edcba72c-c2ca-4613-861d-ae4dcd787935" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="843aa347-d642-4eef-9093-24a3394a905a" direction="Forward">
+          <layerMoniker Id="e21f10e8-ee20-4f18-951e-0c1a7941078c" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="e21f10e8-ee20-4f18-951e-0c1a7941078c" name="PdfConversion.Server.Converter" />
+    <layer Id="eeb0ef85-1686-4b88-ba6d-672750058209" name="PdfConversion.Server.StatusService">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="09e934d6-4b63-470a-a9b0-b5fb9e960332" direction="Forward">
+          <layerMoniker Id="ab6cfa9b-80f1-4d3a-89cd-71aa0289f912" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="c789f8bc-4960-466f-a263-3fcb4c879356" name="PdfConversion.Server.ConsoleServer">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="69031801-2e3b-4713-8944-9887d85ee6f9" direction="Forward">
+          <layerMoniker Id="5cd52a4a-16fa-4e2d-b16a-adfa4eb954a2" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="b64e3745-75a6-4518-93ba-fa959f2de814" direction="Forward">
+          <layerMoniker Id="eeb0ef85-1686-4b88-ba6d-672750058209" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+  </layers>
+</layerModel>

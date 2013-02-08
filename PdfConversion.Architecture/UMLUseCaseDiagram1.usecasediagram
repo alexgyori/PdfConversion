@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="1efd1a6f-63d8-43f2-ac67-373e70ac4e36" name="UMLUseCaseDiagram1" linkedPackageId="f4ad275c-d183-4dd6-b287-d684673922f0" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="6049363f-1d8d-450d-a123-051b228ddf10">
+      <profileInstance Id="1e2d46a1-5871-4fd9-a85c-8e3c579c1250" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e94a8fa8-8fa0-49eb-833f-e486d5b35c05">
+      <profileInstance Id="d514a816-dbb6-4591-8c45-5af65660d6bd" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="3515a057-bf4b-4f75-b28f-f2e0fca3e7ff" name="Client" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="05881bf0-eed7-4c80-8c97-5bcebe703d85" />
+        <targetEnds>
+          <association Id="f1d4e64e-2811-41c8-8233-690f16d6a0f0" isDerived="false" sourceEndRoleName="Client" targetEndRoleName="Ask Server Status" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="744e804b-1524-4b1a-9db0-b45ea8793391" LastKnownName="Ask Server Status" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="56467075-944b-406b-9e96-8dbb6fdba139" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="af1c5735-7dec-4949-84d8-8726083e0cbf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cae5429c-e97a-420d-ba44-fb1d94bbd382" name="Ask Server Status" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="99e85142-51bb-4a50-9228-c1eb0d511b49" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d0e74c5b-26f8-4c4c-bac4-0709efb80f95" />
+          </association>
+          <association Id="46075c34-e1d5-4f6d-8ffe-a5dd2cf59af6" isDerived="false" sourceEndRoleName="Client" targetEndRoleName="View file" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bc8cb1d6-9b6f-4647-b084-bc5b8378de06" LastKnownName="View file" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6610c027-a833-4b57-8f10-4be9f5693f85" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2393ed9c-3018-4250-a866-15a4bfe2364d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7961f0cd-5de1-485f-bec7-2ce35782cdf0" name="View file" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4e6e8a3b-a664-4ee6-a658-66938b40c753" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ff4accd0-1561-4142-a971-72247262b316" />
+          </association>
+          <association Id="3c17cb8e-5d84-4c06-a092-34da575e0979" isDerived="false" sourceEndRoleName="Client" targetEndRoleName="Ask file status" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="67364041-a766-4a86-bedf-40801e889123" LastKnownName="Ask file status" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e6bf904d-7cb3-4cca-bcab-e9914ef974a2" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bb64812e-0121-4b71-9484-7137e9e0903c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="286dad6e-c826-43f6-8ff3-44dda5cba732" name="Ask file status" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="df9d1169-bcc5-49a2-a3db-c6ad51d4c3da" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6d6cc10c-0c4a-4bc0-b678-9ff0171a54b8" />
+          </association>
+          <association Id="4cb357e9-8cf4-4946-b538-15d8d2cae5cc" isDerived="false" sourceEndRoleName="Client" targetEndRoleName="Submit file(s) for conversion" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1abd2dfa-3401-4e41-9a16-dc3cc2aa3288" LastKnownName="Submit file(s) for conversion" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4a6507c4-4cd5-4d12-b338-f0d5c172172c" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e513fb51-e99a-47a8-b682-762c7fa365d7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b5e7e801-da55-4f8b-920e-72ef81e47e2b" name="Submit file(s) for conversion" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="73849d8d-5230-4b93-b910-dc088a9f0224" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2c9b2593-4d9d-4c9b-92a7-858d19633e96" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="744e804b-1524-4b1a-9db0-b45ea8793391" name="Ask Server Status" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="324bed09-7aee-4b25-8576-712446241ee4" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="55a30f23-517c-4e60-86a3-b7b474f0c644" name="Server" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cb162545-7b90-4a9f-b211-6b1b08893aed" />
+        <targetEnds>
+          <association Id="5d5c3cc1-fd3a-4f00-9fa2-aa61f4336dd8" isDerived="false" sourceEndRoleName="Server" targetEndRoleName="Ask Server Status" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="744e804b-1524-4b1a-9db0-b45ea8793391" LastKnownName="Ask Server Status" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fbca57ca-748a-45c0-8378-ab1c7dff220d" name="Server" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="46187cba-ac5d-47bb-9573-142640a60bef" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7f8efb12-9c10-4a23-abea-b9f81c668bce" name="Ask Server Status" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3335afd8-0dab-487a-89d6-cc30c85e1bdd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0ffb8ec2-5d71-4f3f-a419-d99b7394a8ed" />
+          </association>
+          <association Id="b905fac2-466f-498a-8b54-909b84e981b6" isDerived="false" sourceEndRoleName="Server" targetEndRoleName="View file" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bc8cb1d6-9b6f-4647-b084-bc5b8378de06" LastKnownName="View file" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9b07e3ae-54b6-4345-ba68-7a06e10ed037" name="Server" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8adbc5d9-5132-4c35-adf2-05d714e60b82" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0d13d56d-a0be-4545-ab06-23074ce3eec9" name="View file" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c8541285-fb76-4328-a196-383faba352fa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="977e878f-006e-4789-8a7b-a6327d8e75b2" />
+          </association>
+          <association Id="6600226d-cd18-4240-b99d-e8b14ac2faf4" isDerived="false" sourceEndRoleName="Server" targetEndRoleName="Ask file status" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="67364041-a766-4a86-bedf-40801e889123" LastKnownName="Ask file status" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d1d597de-3574-4f2c-88dc-c85846709656" name="Server" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="07c85356-b6a0-44ed-b1f8-8b4e96ce4d02" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f62ec64a-f91c-48eb-8856-c3cbc21f4729" name="Ask file status" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fab1e2a5-10a4-426a-90c7-f061b6dda49c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f721ab54-3257-48ae-a733-e23712234915" />
+          </association>
+          <association Id="d663e8c4-da52-42b6-8c08-c4f7dba43190" isDerived="false" sourceEndRoleName="Server" targetEndRoleName="Submit file(s) for conversion" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1abd2dfa-3401-4e41-9a16-dc3cc2aa3288" LastKnownName="Submit file(s) for conversion" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c4408b82-0e05-437e-be0b-14aec04acd5e" name="Server" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a58430bc-b3de-4497-8391-cf14706c8cd3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2d47fc94-7349-468e-9424-ad2ce8f4c1eb" name="Submit file(s) for conversion" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="22baf4a5-64df-4b6d-9a99-95ca80f4d1b1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4e397807-f7f7-4523-b1da-dc6aefa52ae8" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1abd2dfa-3401-4e41-9a16-dc3cc2aa3288" name="Submit file(s) for conversion" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d9c961c3-3d06-4916-9c0e-ee95a8d9d32e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="67364041-a766-4a86-bedf-40801e889123" name="Ask file status" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c90e32dc-6580-4f45-afa1-3d0f95e763dc" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bc8cb1d6-9b6f-4647-b084-bc5b8378de06" name="View file" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f0a7e00f-c76b-4464-b0ea-506269e3be79" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="f4ad275c-d183-4dd6-b287-d684673922f0" name="PdfConversion.Architecture">
+    <elementDefinition Id="235fe37f-f80b-425e-9c2a-f7eff6c39a81" />
+  </package>
+</useCaseModelRoot>

@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="235fe37f-f80b-425e-9c2a-f7eff6c39a81"
+  name="PdfConversion.Architecture" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="35169355-326b-4adb-9dba-e49072a2881e">
+      <body>This represents the client, that can check for the status of the files, upload files to the server for conversion, lists converted files, and displys server and files status.</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <component
+        Id="69c855a2-75f1-4db2-b48f-95d6fd46d091"
+        name="Converter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="1b3e9303-092e-47cd-b992-fe4b966b4da5"
+        name="Client"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="7e94a6b9-555d-43fe-be25-60bf99406b05">
+            <componentMoniker
+              Id="56790e23-b7ad-4b5c-8c3e-1c7980ba3400"
+              LastKnownName="Blackboard"
+              LastKnownLocation="PdfConversion.Architecture.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <requiredInterface
+            Id="ac15f5c4-e1fe-4c28-9378-10aaf04e78ab"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="ca53d73b-3e26-45f5-a81c-f0ff1c6389c7">
+                <providedInterfaceMoniker
+                  Id="ed44e90d-47cf-4e64-a6f6-487010085df6"
+                  LastKnownName="Port1"
+                  LastKnownLocation="PdfConversion.Architecture.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="706dafba-22a6-4590-b8da-167c8e059b9c"
+                LastKnownName="IConversionService"
+                LastKnownLocation="PdfConversion.Architecture.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="9026bf1f-0065-4958-a9f3-532536f5f42a"
+        name="Server"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="aa3c595a-6e10-43dc-ba8d-6ffa26dffc96">
+            <componentMoniker
+              Id="56790e23-b7ad-4b5c-8c3e-1c7980ba3400"
+              LastKnownName="Blackboard"
+              LastKnownLocation="PdfConversion.Architecture.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <part
+            Id="c09be851-c04a-4f12-8321-4abc3c444cce"
+            name="Converter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="Composite"
+            isComposite="true">
+            <type_NamedElement>
+              <componentMoniker
+                Id="4f81facf-7df1-49ea-b18e-262610d36b94"
+                LastKnownName="Component1"
+                LastKnownLocation="PdfConversion.Architecture.uml" />
+            </type_NamedElement>
+          </part>
+          <providedInterface
+            Id="ed44e90d-47cf-4e64-a6f6-487010085df6"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="39c68174-41c4-43ca-b9b2-a950e1523f0e"
+                LastKnownName="IConversionService"
+                LastKnownLocation="PdfConversion.Architecture.uml" />
+            </type_NamedElement>
+          </providedInterface>
+          <part
+            Id="ed1e3165-5c1c-4404-a2f3-f01717be044c"
+            name="BlackboardMonitor"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="Composite"
+            isComposite="true">
+            <targetNamedElementsInternal>
+              <connector
+                Id="f55aedba-fdd4-4456-88a9-6e8e218bf346"
+                isLeaf="false"
+                isStatic="false">
+                <partMoniker
+                  Id="c09be851-c04a-4f12-8321-4abc3c444cce"
+                  LastKnownName="Converter"
+                  LastKnownLocation="PdfConversion.Architecture.uml" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="de77e59b-c065-4f59-b999-91f7a95b9958" />
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="74736470-ee5b-40bd-a048-d565cd357d04" />
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+              </connector>
+              <connector
+                Id="3e6d029a-7418-404e-b944-0c5f92f9e547"
+                isLeaf="false"
+                isStatic="false">
+                <requiredInterfaceMoniker
+                  Id="ab87fb1a-f315-49ed-9317-15b8ef3a25cd"
+                  LastKnownName="Port3"
+                  LastKnownLocation="PdfConversion.Architecture.uml" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="a63da2f5-55a0-4f3c-9029-7fc581ff128d">
+                      <portWithPart>
+                        <requiredInterfaceMoniker
+                          Id="3ff18866-0c06-4647-b619-6926fe30dd8c"
+                          LastKnownName="Port1"
+                          LastKnownLocation="PdfConversion.Architecture.uml" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="03e13bef-bb86-4ae3-9cb2-09240ed2d313" />
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker
+                Id="13d02dfa-ca09-49d3-9c60-43dc50494ead"
+                LastKnownName="Component4"
+                LastKnownLocation="PdfConversion.Architecture.uml" />
+            </type_NamedElement>
+          </part>
+          <requiredInterface
+            Id="ab87fb1a-f315-49ed-9317-15b8ef3a25cd"
+            name="Port3"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="b6afa44d-f605-44c0-afaa-d84147d34c71">
+                <providedInterfaceMoniker
+                  Id="32a84e22-81b6-47e0-968e-35440f0b9adf"
+                  LastKnownName="Port1"
+                  LastKnownLocation="PdfConversion.Architecture.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="6ce2c94d-b7a2-4fa4-8a72-76794aef64f9"
+                LastKnownName="IDocumentStatusProvider"
+                LastKnownLocation="PdfConversion.Architecture.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="d1d43299-36f0-42e3-93f0-e2eb347ff3e7"
+        name="Component2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="4f81facf-7df1-49ea-b18e-262610d36b94"
+        name="Component1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="39c68174-41c4-43ca-b9b2-a950e1523f0e"
+        name="IConversionService"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="706dafba-22a6-4590-b8da-167c8e059b9c"
+        name="IConversionService"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="3476dd37-ae2a-4527-89e6-0be899c565c5"
+        name="RequestsBlackboard"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="c50efb69-394d-41d5-8234-88e41d16825b"
+        name="ConvertedBlackboard"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="29412eab-7c64-4864-bd5b-9dbfe6e048f5"
+        name="IPdfServerStatus"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="a9aa5ac6-dc5a-4a1b-9fff-1596feb25a5f"
+        name="IPdfServerStatus"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="91ec3ad7-cf63-4bfd-bcef-cfc993f2a970"
+        name="Blackboard"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="56790e23-b7ad-4b5c-8c3e-1c7980ba3400"
+        name="Blackboard"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="0cd71aad-4f74-4463-94c2-e84fa9cd6c90"
+        name="Component3"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="13d02dfa-ca09-49d3-9c60-43dc50494ead"
+        name="Component4"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <requiredInterface
+            Id="3ff18866-0c06-4647-b619-6926fe30dd8c"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="662c9799-1569-4101-a595-d9142ef87e4a"
+                LastKnownName="DocumentStatusProvider"
+                LastKnownLocation="PdfConversion.Architecture.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="c874f487-7caf-4eca-b2e5-2bd2b1e61e55"
+        name="Component5"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="f20097de-1ef1-48e7-a478-f51561f6aac1"
+        name="DataService"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="32a84e22-81b6-47e0-968e-35440f0b9adf"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="8955dcbc-77ef-42fe-9a56-c6d4a212fae6"
+                LastKnownName="IDocumentStatusProvider"
+                LastKnownLocation="PdfConversion.Architecture.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="8955dcbc-77ef-42fe-9a56-c6d4a212fae6"
+        name="IDocumentStatusProvider"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6ce2c94d-b7a2-4fa4-8a72-76794aef64f9"
+        name="IDocumentStatusProvider"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="05881bf0-eed7-4c80-8c97-5bcebe703d85"
+        name="Client"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="d0e74c5b-26f8-4c4c-bac4-0709efb80f95"
+            isDerived="false"
+            sourceEndRoleName="Client"
+            targetEndRoleName="Ask Server Status"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="324bed09-7aee-4b25-8576-712446241ee4"
+              LastKnownName="Ask Server Status"
+              LastKnownLocation="PdfConversion.Architecture.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="af1c5735-7dec-4949-84d8-8726083e0cbf"
+                  name="Client"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="99e85142-51bb-4a50-9228-c1eb0d511b49"
+                  name="Ask Server Status"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ff4accd0-1561-4142-a971-72247262b316"
+            isDerived="false"
+            sourceEndRoleName="Client"
+            targetEndRoleName="View file"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f0a7e00f-c76b-4464-b0ea-506269e3be79"
+              LastKnownName="View file"
+              LastKnownLocation="PdfConversion.Architecture.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2393ed9c-3018-4250-a866-15a4bfe2364d"
+                  name="Client"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4e6e8a3b-a664-4ee6-a658-66938b40c753"
+                  name="View file"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6d6cc10c-0c4a-4bc0-b678-9ff0171a54b8"
+            isDerived="false"
+            sourceEndRoleName="Client"
+            targetEndRoleName="Ask file status"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c90e32dc-6580-4f45-afa1-3d0f95e763dc"
+              LastKnownName="Ask file status"
+              LastKnownLocation="PdfConversion.Architecture.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bb64812e-0121-4b71-9484-7137e9e0903c"
+                  name="Client"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="df9d1169-bcc5-49a2-a3db-c6ad51d4c3da"
+                  name="Ask file status"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2c9b2593-4d9d-4c9b-92a7-858d19633e96"
+            isDerived="false"
+            sourceEndRoleName="Client"
+            targetEndRoleName="Submit file(s) for conversion"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d9c961c3-3d06-4916-9c0e-ee95a8d9d32e"
+              LastKnownName="Submit file(s) for conversion"
+              LastKnownLocation="PdfConversion.Architecture.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e513fb51-e99a-47a8-b682-762c7fa365d7"
+                  name="Client"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="73849d8d-5230-4b93-b910-dc088a9f0224"
+                  name="Submit file(s) for conversion"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="324bed09-7aee-4b25-8576-712446241ee4"
+        name="Ask Server Status"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="cb162545-7b90-4a9f-b211-6b1b08893aed"
+        name="Server"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="0ffb8ec2-5d71-4f3f-a419-d99b7394a8ed"
+            isDerived="false"
+            sourceEndRoleName="Server"
+            targetEndRoleName="Ask Server Status"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="324bed09-7aee-4b25-8576-712446241ee4"
+              LastKnownName="Ask Server Status"
+              LastKnownLocation="PdfConversion.Architecture.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="46187cba-ac5d-47bb-9573-142640a60bef"
+                  name="Server"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3335afd8-0dab-487a-89d6-cc30c85e1bdd"
+                  name="Ask Server Status"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="977e878f-006e-4789-8a7b-a6327d8e75b2"
+            isDerived="false"
+            sourceEndRoleName="Server"
+            targetEndRoleName="View file"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f0a7e00f-c76b-4464-b0ea-506269e3be79"
+              LastKnownName="View file"
+              LastKnownLocation="PdfConversion.Architecture.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8adbc5d9-5132-4c35-adf2-05d714e60b82"
+                  name="Server"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c8541285-fb76-4328-a196-383faba352fa"
+                  name="View file"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f721ab54-3257-48ae-a733-e23712234915"
+            isDerived="false"
+            sourceEndRoleName="Server"
+            targetEndRoleName="Ask file status"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c90e32dc-6580-4f45-afa1-3d0f95e763dc"
+              LastKnownName="Ask file status"
+              LastKnownLocation="PdfConversion.Architecture.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="07c85356-b6a0-44ed-b1f8-8b4e96ce4d02"
+                  name="Server"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fab1e2a5-10a4-426a-90c7-f061b6dda49c"
+                  name="Ask file status"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4e397807-f7f7-4523-b1da-dc6aefa52ae8"
+            isDerived="false"
+            sourceEndRoleName="Server"
+            targetEndRoleName="Submit file(s) for conversion"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d9c961c3-3d06-4916-9c0e-ee95a8d9d32e"
+              LastKnownName="Submit file(s) for conversion"
+              LastKnownLocation="PdfConversion.Architecture.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a58430bc-b3de-4497-8391-cf14706c8cd3"
+                  name="Server"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="22baf4a5-64df-4b6d-9a99-95ca80f4d1b1"
+                  name="Submit file(s) for conversion"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d9c961c3-3d06-4916-9c0e-ee95a8d9d32e"
+        name="Submit file(s) for conversion"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c90e32dc-6580-4f45-afa1-3d0f95e763dc"
+        name="Ask file status"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f0a7e00f-c76b-4464-b0ea-506269e3be79"
+        name="View file"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="dd7de40f-adb4-4805-a5a1-9ed72feb78ce"
+        name="Component6"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="662c9799-1569-4101-a595-d9142ef87e4a"
+        name="DocumentStatusProvider"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

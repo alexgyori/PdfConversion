@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="7207253d-9d7e-49ae-830f-4ecc99a47d4d" name="Components" linkedPackageId="9f8ef37d-c777-4c7b-b1e8-363ccf8c8c02" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <ownedCommentsInternal>
+    <comment Id="89005c99-255e-47e2-8108-75141e3637d9">
+      <elementDefinition Id="35169355-326b-4adb-9dba-e49072a2881e" />
+      <body>This represents the client, that can check for the status of the files, upload files to the server for conversion, lists converted files, and displys server and files status.</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="81a3b110-c362-4bbb-a8a9-24650788409f" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1b3e9303-092e-47cd-b992-fe4b966b4da5" />
+        <suppliersInternal>
+          <dependency Id="62441753-a8dc-4f3f-b053-47418336b44b">
+            <componentMoniker Id="ed65fc77-75e4-4df9-9858-affdd652a923" LastKnownName="Blackboard" />
+            <elementDefinition Id="7e94a6b9-555d-43fe-be25-60bf99406b05" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <requiredInterface Id="cb696a54-19dc-4db4-ab3e-2d287b42279a" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="ac15f5c4-e1fe-4c28-9378-10aaf04e78ab" />
+            <suppliersInternal>
+              <dependency Id="0182acd2-9670-46f6-b5dc-95f39e74192f">
+                <providedInterfaceMoniker Id="68f8fa3c-e06d-49fa-9477-132ce0f1ad23" LastKnownName="Port1" />
+                <elementDefinition Id="ca53d73b-3e26-45f5-a81c-f0ff1c6389c7" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="b06bf5bd-d559-465b-abbc-d5cbeda3715c" LastKnownName="IConversionService" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="47028110-a72b-4959-86ba-05121b966677" name="Server" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9026bf1f-0065-4958-a9f3-532536f5f42a" />
+        <suppliersInternal>
+          <dependency Id="a88437cd-0730-48b6-bdb6-5277556f37b1">
+            <componentMoniker Id="ed65fc77-75e4-4df9-9858-affdd652a923" LastKnownName="Blackboard" />
+            <elementDefinition Id="aa3c595a-6e10-43dc-ba8d-6ffa26dffc96" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <part Id="51b768d0-f979-472b-87bd-89db88b4e928" name="Converter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="c09be851-c04a-4f12-8321-4abc3c444cce" />
+            <type_NamedElement>
+              <componentMoniker Id="557af376-3860-42fe-a70e-2b1573553198" LastKnownName="Component1" />
+            </type_NamedElement>
+          </part>
+          <providedInterface Id="68f8fa3c-e06d-49fa-9477-132ce0f1ad23" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="ed44e90d-47cf-4e64-a6f6-487010085df6" />
+            <type_NamedElement>
+              <interfaceMoniker Id="8ddf3dd7-01d9-44b3-8fee-c7d38465f5b4" LastKnownName="IConversionService" />
+            </type_NamedElement>
+          </providedInterface>
+          <part Id="484c9b05-3f05-46c3-bd33-d83e157635b6" name="BlackboardMonitor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="ed1e3165-5c1c-4404-a2f3-f01717be044c" />
+            <targetNamedElementsInternal>
+              <connector Id="f98cd727-a870-4978-ba45-201e6631c2d9" isLeaf="false" isStatic="false">
+                <partMoniker Id="51b768d0-f979-472b-87bd-89db88b4e928" LastKnownName="Converter" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="8bd82bb0-49f1-4c96-bc9b-c55103272c6b">
+                      <elementDefinition Id="de77e59b-c065-4f59-b999-91f7a95b9958" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="62be5f13-c8b1-44a6-be5c-bb23d630109a">
+                      <elementDefinition Id="74736470-ee5b-40bd-a048-d565cd357d04" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="f55aedba-fdd4-4456-88a9-6e8e218bf346" />
+              </connector>
+              <connector Id="2d22c9f1-9142-4735-88fb-0608268aaa30" isLeaf="false" isStatic="false">
+                <requiredInterfaceMoniker Id="adbbccda-ef25-4186-a0f9-57190fc8eacc" LastKnownName="Port3" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="2eb47c0f-afcf-41a4-9710-c5e9f1a79a8a">
+                      <elementDefinition Id="a63da2f5-55a0-4f3c-9029-7fc581ff128d" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="f1d73815-9c56-415c-a9f7-45af7167f752" LastKnownName="Port1" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="1d4459a4-929a-40b2-89c9-146bb198af15">
+                      <elementDefinition Id="03e13bef-bb86-4ae3-9cb2-09240ed2d313" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="3e6d029a-7418-404e-b944-0c5f92f9e547" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker Id="8b0e2db8-3867-4d66-9a98-9f8d0beef349" LastKnownName="Component4" />
+            </type_NamedElement>
+          </part>
+          <requiredInterface Id="adbbccda-ef25-4186-a0f9-57190fc8eacc" name="Port3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="ab87fb1a-f315-49ed-9317-15b8ef3a25cd" />
+            <suppliersInternal>
+              <dependency Id="67a94fc8-acc9-46e3-a4c1-ebd25e773ea3">
+                <providedInterfaceMoniker Id="8e87fe28-17ff-40b3-b61b-dec85cf7db96" LastKnownName="Port1" />
+                <elementDefinition Id="b6afa44d-f605-44c0-afaa-d84147d34c71" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="7aa72099-6842-44a3-9dae-637c60af443e" LastKnownName="IDocumentStatusProvider" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="557af376-3860-42fe-a70e-2b1573553198" name="Component1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4f81facf-7df1-49ea-b18e-262610d36b94" />
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="8ddf3dd7-01d9-44b3-8fee-c7d38465f5b4" name="IConversionService" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="39c68174-41c4-43ca-b9b2-a950e1523f0e" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="b06bf5bd-d559-465b-abbc-d5cbeda3715c" name="IConversionService" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="706dafba-22a6-4590-b8da-167c8e059b9c" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="ed65fc77-75e4-4df9-9858-affdd652a923" name="Blackboard" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="56790e23-b7ad-4b5c-8c3e-1c7980ba3400" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="8b0e2db8-3867-4d66-9a98-9f8d0beef349" name="Component4" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="13d02dfa-ca09-49d3-9c60-43dc50494ead" />
+        <ownedAttributesInternal>
+          <requiredInterface Id="f1d73815-9c56-415c-a9f7-45af7167f752" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="3ff18866-0c06-4647-b619-6926fe30dd8c" />
+            <type_NamedElement>
+              <interfaceMoniker Id="83f9ecae-9cb7-4f99-a41b-027b58706e31" LastKnownName="DocumentStatusProvider" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="1e4ffe8f-6a4f-482b-9df1-210dd19a4eaf" name="DataService" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f20097de-1ef1-48e7-a478-f51561f6aac1" />
+        <ownedAttributesInternal>
+          <providedInterface Id="8e87fe28-17ff-40b3-b61b-dec85cf7db96" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="32a84e22-81b6-47e0-968e-35440f0b9adf" />
+            <type_NamedElement>
+              <interfaceMoniker Id="8c4636fb-1bf0-4bb0-bb67-f78cd55fa20c" LastKnownName="IDocumentStatusProvider" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="8c4636fb-1bf0-4bb0-bb67-f78cd55fa20c" name="IDocumentStatusProvider" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8955dcbc-77ef-42fe-9a56-c6d4a212fae6" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="7aa72099-6842-44a3-9dae-637c60af443e" name="IDocumentStatusProvider" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6ce2c94d-b7a2-4fa4-8a72-76794aef64f9" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="83f9ecae-9cb7-4f99-a41b-027b58706e31" name="DocumentStatusProvider" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="662c9799-1569-4101-a595-d9142ef87e4a" />
+      </Interface>
+    </modelContainsNamedElements>
+  </packagedElements>
+  <package Id="9f8ef37d-c777-4c7b-b1e8-363ccf8c8c02" name="PdfConversion.Architecture">
+    <elementDefinition Id="235fe37f-f80b-425e-9c2a-f7eff6c39a81" />
+    <profileInstances>
+      <packageHasProfileInstances Id="9c4f35ba-3ac5-456c-af60-4236bff5e4b1">
+        <profileInstance Id="7c1c7ca5-5bc1-451a-bc84-e83100b348dc" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="db4fea82-dc9f-4c26-afda-373a3d8bed80">
+        <profileInstance Id="6fdb4e3c-5c50-4555-85dc-833ccb851e10" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</componentModel>

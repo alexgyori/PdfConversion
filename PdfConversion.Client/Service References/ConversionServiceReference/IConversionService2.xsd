@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PdfConversionService.API" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PdfConversionService.API" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="FileState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Queued" />
+      <xs:enumeration value="Converting" />
+      <xs:enumeration value="Converted" />
+      <xs:enumeration value="Missing" />
+      <xs:enumeration value="Erroneous" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FileState" nillable="true" type="tns:FileState" />
+  <xs:simpleType name="ServerState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Offline" />
+      <xs:enumeration value="Waiting" />
+      <xs:enumeration value="Processing" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ServerState" nillable="true" type="tns:ServerState" />
+</xs:schema>

@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PdfConversion.Server.Converter.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter">
+            <summary>Shim type of PdfConversion.Server.Converter.ImageToPdfConverter</summary>
+        </member>
+        <member name="M:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.#ctor(PdfConversion.Server.Converter.ImageToPdfConverter)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.Bind(PdfConversion.Server.Converter.IConverter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.BuildCleanDocumentString">
+            <summary>Sets the shim of ImageToPdfConverter.BuildCleanDocument(String filePath)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.ChangeFileStateToConvertedStringString">
+            <summary>Sets the shim of ImageToPdfConverter.ChangeFileStateToConverted(String filePath, String outputPdfFile)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.ChangeFileStateToConvertingString">
+            <summary>Sets the shim of ImageToPdfConverter.ChangeFileStateToConverting(String filePath)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.ChangeFileStateToErroneousString">
+            <summary>Sets the shim of ImageToPdfConverter.ChangeFileStateToErroneous(String filePath)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.ChangeFileStatusTemplateMethodStringFileStateActionOfFileStatusEntity">
+            <summary>Sets the shim of ImageToPdfConverter.ChangeFileStatusTemplateMethod(String filePath, FileState state, Action`1&lt;FileStatusEntity&gt; f)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.ConstructorStringStringString">
+            <summary>Sets the shim of ImageToPdfConverter.ImageToPdfConverter(String outputFolder, String title, String author)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.ConvertString">
+            <summary>Sets the shim of ImageToPdfConverter.Convert(String filePath)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.RenderDocumentString">
+            <summary>Sets the shim of ImageToPdfConverter.RenderDocument(String filePath)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter._ChangeFileStateToConvertingb__3FileStatusEntity">
+            <summary>Sets the shim of ImageToPdfConverter.&lt;ChangeFileStateToConverting&gt;b__3(FileStatusEntity ent)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter._ChangeFileStateToErroneousb__5FileStatusEntity">
+            <summary>Sets the shim of ImageToPdfConverter.&lt;ChangeFileStateToErroneous&gt;b__5(FileStatusEntity ent)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.setUpImageImage">
+            <summary>Sets the shim of ImageToPdfConverter.setUpImage(Image img)</summary>
+        </member>
+        <member name="T:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.AllInstances.BuildCleanDocumentString">
+            <summary>Sets the shim of ImageToPdfConverter.BuildCleanDocument(String filePath)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.AllInstances.ChangeFileStateToConvertedStringString">
+            <summary>Sets the shim of ImageToPdfConverter.ChangeFileStateToConverted(String filePath, String outputPdfFile)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.AllInstances.ChangeFileStateToConvertingString">
+            <summary>Sets the shim of ImageToPdfConverter.ChangeFileStateToConverting(String filePath)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.AllInstances.ChangeFileStateToErroneousString">
+            <summary>Sets the shim of ImageToPdfConverter.ChangeFileStateToErroneous(String filePath)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.AllInstances.ChangeFileStatusTemplateMethodStringFileStateActionOfFileStatusEntity">
+            <summary>Sets the shim of ImageToPdfConverter.ChangeFileStatusTemplateMethod(String filePath, FileState state, Action`1&lt;FileStatusEntity&gt; f)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.AllInstances.ConvertString">
+            <summary>Sets the shim of ImageToPdfConverter.Convert(String filePath)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.AllInstances.RenderDocumentString">
+            <summary>Sets the shim of ImageToPdfConverter.RenderDocument(String filePath)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.ShimImageToPdfConverter.AllInstances.setUpImageImage">
+            <summary>Sets the shim of ImageToPdfConverter.setUpImage(Image img)</summary>
+        </member>
+        <member name="T:PdfConversion.Server.Converter.Fakes.StubIConverter">
+            <summary>Stub type of PdfConversion.Server.Converter.IConverter</summary>
+        </member>
+        <member name="M:PdfConversion.Server.Converter.Fakes.StubIConverter.#ctor">
+            <summary>Initializes a new instance of type StubIConverter</summary>
+        </member>
+        <member name="F:PdfConversion.Server.Converter.Fakes.StubIConverter.ConvertString">
+            <summary>Sets the stub of IConverter.Convert(String filePath)</summary>
+        </member>
+        <member name="M:PdfConversion.Server.Converter.Fakes.StubIConverter.pcsc::PdfConversion#Server#Converter#IConverter#Convert(System.String)">
+            <summary>Sets the stub of IConverter.Convert(String filePath)</summary>
+        </member>
+        <member name="T:PdfConversion.Server.Converter.Fakes.StubImageToPdfConverter">
+            <summary>Stub type of PdfConversion.Server.Converter.ImageToPdfConverter</summary>
+        </member>
+        <member name="M:PdfConversion.Server.Converter.Fakes.StubImageToPdfConverter.#ctor(System.String,System.String,System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:PdfConversion.Server.Converter.Fakes.StubImageToPdfConverter.InitializeStub">
+            <summary>Initializes a new instance of type StubImageToPdfConverter</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.StubImageToPdfConverter.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.StubImageToPdfConverter.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:PdfConversion.Server.Converter.Fakes.StubImageToPdfConverter.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>

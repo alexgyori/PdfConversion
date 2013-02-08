@@ -1,0 +1,26 @@
+﻿<Window x:Class="PdfConversion.Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pdf Conversion" Height="436" Width="525" ResizeMode="NoResize">
+
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="364" Margin="23,25,0,0" VerticalAlignment="Top" Width="474">
+            <Button x:Name="buttonUploadPdf" Content="Upload Image" HorizontalAlignment="Left" Margin="389,247,0,0" VerticalAlignment="Top" Width="75" Click="UploadButtonClick"/>
+            <ListBox x:Name="listBoxFiles"  HorizontalAlignment="Left" Height="239" Margin="10,61,0,0" VerticalAlignment="Top" Width="324" DisplayMemberPath="FileName" RenderTransformOrigin="0.5,0.5" KeyDown="ListBoxKeyPressed">
+                <ListBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="0.475"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="0.992"/>
+                    </TransformGroup>
+                </ListBox.RenderTransform>
+            </ListBox>
+            <Label x:Name="LabelServerStatus" Content="ServerStatus" Background="Gray"  HorizontalAlignment="Left" Height="25" Margin="360,12,0,0" VerticalAlignment="Top" Width="81"/>
+            <Label Content="Double click an item to find the status of submitted files.&#xD;&#xA;You will have the option to open the files that are converted" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.105,0.077" Height="47"/>
+            <Button Content="Refresh List" HorizontalAlignment="Left" Margin="181,316,0,0" VerticalAlignment="Top" Width="90" Click="RefreshButtonClick"/>
+        </Grid>
+        
+
+    </Grid>
+</Window>

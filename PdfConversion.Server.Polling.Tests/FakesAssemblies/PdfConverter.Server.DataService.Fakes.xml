@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PdfConverter.Server.DataService.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:PdfConversion.Server.DataService.Fakes.ShimFileStatusContext">
+            <summary>Shim type of PdfConversion.Server.DataService.FileStatusContext</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.ShimFileStatusContext.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.ShimFileStatusContext.#ctor(PdfConversion.Server.DataService.FileStatusContext)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.ShimFileStatusContext.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.ShimFileStatusContext.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.ShimFileStatusContext.Bind(System.Data.Entity.Infrastructure.IObjectContextAdapter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.ShimFileStatusContext.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusContext.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusContext.Constructor">
+            <summary>Sets the shim of FileStatusContext.FileStatusContext()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusContext.FileStatusEntitiesGet">
+            <summary>Sets the shim of FileStatusContext.get_FileStatusEntities()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusContext.FileStatusEntitiesSetDbSetOfFileStatusEntity">
+            <summary>Sets the shim of FileStatusContext.set_FileStatusEntities(DbSet`1&lt;FileStatusEntity&gt; value)</summary>
+        </member>
+        <member name="T:PdfConversion.Server.DataService.Fakes.ShimFileStatusContext.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusContext.AllInstances.FileStatusEntitiesGet">
+            <summary>Sets the shim of FileStatusContext.get_FileStatusEntities()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusContext.AllInstances.FileStatusEntitiesSetDbSetOfFileStatusEntity">
+            <summary>Sets the shim of FileStatusContext.set_FileStatusEntities(DbSet`1&lt;FileStatusEntity&gt; value)</summary>
+        </member>
+        <member name="T:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity">
+            <summary>Shim type of PdfConversion.Server.DataService.FileStatusEntity</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.#ctor(PdfConversion.Server.DataService.FileStatusEntity)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.Constructor">
+            <summary>Sets the shim of FileStatusEntity.FileStatusEntity()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.ConstructorStringString">
+            <summary>Sets the shim of FileStatusEntity.FileStatusEntity(String FileName, String PhysicalFileName)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.ConvertedFileNameGet">
+            <summary>Sets the shim of FileStatusEntity.get_ConvertedFileName()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.ConvertedFileNameSetString">
+            <summary>Sets the shim of FileStatusEntity.set_ConvertedFileName(String value)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.FileNameGet">
+            <summary>Sets the shim of FileStatusEntity.get_FileName()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.FileNameSetString">
+            <summary>Sets the shim of FileStatusEntity.set_FileName(String value)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.FileStateGet">
+            <summary>Sets the shim of FileStatusEntity.get_FileState()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.FileStateSetFileState">
+            <summary>Sets the shim of FileStatusEntity.set_FileState(FileState value)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.IdGet">
+            <summary>Sets the shim of FileStatusEntity.get_Id()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.IdSetGuid">
+            <summary>Sets the shim of FileStatusEntity.set_Id(Guid value)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.PhysicalFileNameGet">
+            <summary>Sets the shim of FileStatusEntity.get_PhysicalFileName()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.PhysicalFileNameSetString">
+            <summary>Sets the shim of FileStatusEntity.set_PhysicalFileName(String value)</summary>
+        </member>
+        <member name="T:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.AllInstances.ConvertedFileNameGet">
+            <summary>Sets the shim of FileStatusEntity.get_ConvertedFileName()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.AllInstances.ConvertedFileNameSetString">
+            <summary>Sets the shim of FileStatusEntity.set_ConvertedFileName(String value)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.AllInstances.FileNameGet">
+            <summary>Sets the shim of FileStatusEntity.get_FileName()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.AllInstances.FileNameSetString">
+            <summary>Sets the shim of FileStatusEntity.set_FileName(String value)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.AllInstances.FileStateGet">
+            <summary>Sets the shim of FileStatusEntity.get_FileState()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.AllInstances.FileStateSetFileState">
+            <summary>Sets the shim of FileStatusEntity.set_FileState(FileState value)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.AllInstances.IdGet">
+            <summary>Sets the shim of FileStatusEntity.get_Id()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.AllInstances.IdSetGuid">
+            <summary>Sets the shim of FileStatusEntity.set_Id(Guid value)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.AllInstances.PhysicalFileNameGet">
+            <summary>Sets the shim of FileStatusEntity.get_PhysicalFileName()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusEntity.AllInstances.PhysicalFileNameSetString">
+            <summary>Sets the shim of FileStatusEntity.set_PhysicalFileName(String value)</summary>
+        </member>
+        <member name="T:PdfConversion.Server.DataService.Fakes.ShimFileStatusRepositoryFactory">
+            <summary>Shim type of PdfConversion.Server.DataService.FileStatusRepositoryFactory</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.ShimFileStatusRepositoryFactory.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.ShimFileStatusRepositoryFactory.#ctor(PdfConversion.Server.DataService.FileStatusRepositoryFactory)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.ShimFileStatusRepositoryFactory.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.ShimFileStatusRepositoryFactory.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusRepositoryFactory.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusRepositoryFactory.Constructor">
+            <summary>Sets the shim of FileStatusRepositoryFactory.FileStatusRepositoryFactory()</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.ShimFileStatusRepositoryFactory.GetRepository">
+            <summary>Sets the shim of FileStatusRepositoryFactory.GetRepository()</summary>
+        </member>
+        <member name="T:PdfConversion.Server.DataService.Fakes.ShimFileStatusRepositoryFactory.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:PdfConversion.Server.DataService.Fakes.StubFileStatusContext">
+            <summary>Stub type of PdfConversion.Server.DataService.FileStatusContext</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.Dispose(System.Boolean)">
+            <summary>Sets the stub of DbContext.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.DisposeBoolean">
+            <summary>Sets the stub of DbContext.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.Equals(System.Object)">
+            <summary>Sets the stub of DbContext.Equals(Object obj)</summary>
+        </member>
+        <member name="F:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.EqualsObject">
+            <summary>Sets the stub of DbContext.Equals(Object obj)</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.GetHashCode">
+            <summary>Sets the stub of DbContext.GetHashCode()</summary>
+        </member>
+        <member name="F:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.GetHashCode01">
+            <summary>Sets the stub of DbContext.GetHashCode()</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.InitializeStub">
+            <summary>Initializes a new instance of type StubFileStatusContext</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>Sets the stub of DbContext.OnModelCreating(DbModelBuilder modelBuilder)</summary>
+        </member>
+        <member name="F:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.OnModelCreatingDbModelBuilder">
+            <summary>Sets the stub of DbContext.OnModelCreating(DbModelBuilder modelBuilder)</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.SaveChanges">
+            <summary>Sets the stub of DbContext.SaveChanges()</summary>
+        </member>
+        <member name="F:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.SaveChanges01">
+            <summary>Sets the stub of DbContext.SaveChanges()</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>Sets the stub of DbContext.ShouldValidateEntity(DbEntityEntry entityEntry)</summary>
+        </member>
+        <member name="F:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.ShouldValidateEntityDbEntityEntry">
+            <summary>Sets the stub of DbContext.ShouldValidateEntity(DbEntityEntry entityEntry)</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.ToString">
+            <summary>Sets the stub of DbContext.ToString()</summary>
+        </member>
+        <member name="F:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.ToString01">
+            <summary>Sets the stub of DbContext.ToString()</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})">
+            <summary>Sets the stub of DbContext.ValidateEntity(DbEntityEntry entityEntry, IDictionary`2&lt;Object,Object&gt; items)</summary>
+        </member>
+        <member name="F:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.ValidateEntityDbEntityEntryIDictionaryOfObjectObject">
+            <summary>Sets the stub of DbContext.ValidateEntity(DbEntityEntry entityEntry, IDictionary`2&lt;Object,Object&gt; items)</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.StubFileStatusContext.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:PdfConversion.Server.DataService.Fakes.StubFileStatusEntity">
+            <summary>Stub type of PdfConversion.Server.DataService.FileStatusEntity</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusEntity.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusEntity.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusEntity.InitializeStub">
+            <summary>Initializes a new instance of type StubFileStatusEntity</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.StubFileStatusEntity.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.StubFileStatusEntity.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.StubFileStatusEntity.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:PdfConversion.Server.DataService.Fakes.StubFileStatusRepositoryFactory">
+            <summary>Stub type of PdfConversion.Server.DataService.FileStatusRepositoryFactory</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusRepositoryFactory.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubFileStatusRepositoryFactory.InitializeStub">
+            <summary>Initializes a new instance of type StubFileStatusRepositoryFactory</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.StubFileStatusRepositoryFactory.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.StubFileStatusRepositoryFactory.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:PdfConversion.Server.DataService.Fakes.StubFileStatusRepositoryFactory.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:PdfConversion.Server.DataService.Fakes.StubIRepository`1">
+            <summary>Stub type of PdfConversion.Server.DataService.IRepository`1</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubIRepository`1.#ctor">
+            <summary>Initializes a new instance of type StubIRepository</summary>
+        </member>
+        <member name="F:PdfConversion.Server.DataService.Fakes.StubIRepository`1.DeleteT0">
+            <summary>Sets the stub of IRepository`1.Delete(!0 entity)</summary>
+        </member>
+        <member name="F:PdfConversion.Server.DataService.Fakes.StubIRepository`1.Dispose">
+            <summary>Sets the stub of IDisposable.Dispose()</summary>
+        </member>
+        <member name="F:PdfConversion.Server.DataService.Fakes.StubIRepository`1.GetAll">
+            <summary>Sets the stub of IRepository`1.GetAll()</summary>
+        </member>
+        <member name="F:PdfConversion.Server.DataService.Fakes.StubIRepository`1.InsertT0">
+            <summary>Sets the stub of IRepository`1.Insert(!0 entity)</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubIRepository`1.pcsds::PdfConversion#Server#DataService#IRepository{T}#Delete(`0)">
+            <summary>Sets the stub of IRepository`1.Delete(!0 entity)</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubIRepository`1.pcsds::PdfConversion#Server#DataService#IRepository{T}#GetAll">
+            <summary>Sets the stub of IRepository`1.GetAll()</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubIRepository`1.pcsds::PdfConversion#Server#DataService#IRepository{T}#Insert(`0)">
+            <summary>Sets the stub of IRepository`1.Insert(!0 entity)</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubIRepository`1.pcsds::PdfConversion#Server#DataService#IRepository{T}#SaveChanges">
+            <summary>Sets the stub of IRepository`1.SaveChanges()</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubIRepository`1.pcsds::PdfConversion#Server#DataService#IRepository{T}#SearchFor(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>Sets the stub of IRepository`1.SearchFor(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; predicate)</summary>
+        </member>
+        <member name="F:PdfConversion.Server.DataService.Fakes.StubIRepository`1.SaveChanges">
+            <summary>Sets the stub of IRepository`1.SaveChanges()</summary>
+        </member>
+        <member name="F:PdfConversion.Server.DataService.Fakes.StubIRepository`1.SearchForExpressionOfFuncOfT0Boolean">
+            <summary>Sets the stub of IRepository`1.SearchFor(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; predicate)</summary>
+        </member>
+        <member name="M:PdfConversion.Server.DataService.Fakes.StubIRepository`1.global::System#IDisposable#Dispose">
+            <summary>Sets the stub of IDisposable.Dispose()</summary>
+        </member>
+    </members>
+</doc>

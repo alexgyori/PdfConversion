@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PdfConversion.Server.StatusService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PdfConversion.Server.StatusService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8081/IConversionService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PdfConversionService.API" />
+  <xs:complexType name="ArrayOfFileStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FileStatus" nillable="true" type="tns:FileStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFileStatus" nillable="true" type="tns:ArrayOfFileStatus" />
+  <xs:complexType name="FileStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConvertedFileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PdfConversionService.API" minOccurs="0" name="FileState" type="q1:FileState" />
+      <xs:element minOccurs="0" name="PhysicalFileName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FileStatus" nillable="true" type="tns:FileStatus" />
+</xs:schema>
